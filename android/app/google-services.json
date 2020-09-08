@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "452280144727",
+    "firebase_url": "https://flutter-auth-2e06c.firebaseio.com",
+    "project_id": "flutter-auth-2e06c",
+    "storage_bucket": "flutter-auth-2e06c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:452280144727:android:447ac20e05273ee5b2e412",
+        "android_client_info": {
+          "package_name": "com.daigo.fire_auth_test"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "452280144727-72923ho3shggfipld3563ihlg5tp45ph.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCrOhQHagQv31sKd6LmurA4ISnsnnRvPsE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "452280144727-72923ho3shggfipld3563ihlg5tp45ph.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
