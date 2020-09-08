@@ -7,8 +7,12 @@ import 'package:provider/provider.dart';
 
 
 void main() async {
+
+  //firebase initialization
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
+
+
   runApp(MyApp());
 }
 

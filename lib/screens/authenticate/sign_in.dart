@@ -13,9 +13,9 @@ class _SignInState extends State<SignIn> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.brown[50],
+      backgroundColor: Colors.blueGrey[50],
       appBar: AppBar(
-        backgroundColor: Colors.blueGrey[200],
+        backgroundColor: Colors.blueGrey[400],
         elevation: 0.0,
         title: Text('Sign in to Warf'),
       ),
