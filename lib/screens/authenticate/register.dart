@@ -13,11 +13,12 @@ class Register extends StatefulWidget {
 class _RegisterState extends State<Register> {
 
   final AuthService _auth = AuthService();
+  final _formKey = GlobalKey<FormState>();
 
-
-  //text field state
+   //text field state
   String email = '';
   String password = '';
+  String error = '';
 
   @override
   Widget build(BuildContext context) {
@@ -40,19 +41,29 @@ class _RegisterState extends State<Register> {
       body: Container(
         padding: EdgeInsets.symmetric(vertical: 20.0, horizontal: 50.0),
         child: Form(
+          key: _formKey,
           child: Column(
             children: <Widget>[
               SizedBox(height: 20.0),
               TextFormField(
-                  onChanged: (val){
-                    setState(() => email = val);
-                  }
+//                間違ったemailだとPlatformExceptionが出る
+//                validator: (val) => val.isEmpty ? 'Enter a email' : null,
+                validator: (val){
+                  return RegExp(r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+").hasMatch(val) ?
+                  null : "Enter correct email";
+                },
+                onChanged: (val){
+                  setState(() {
+                    email = val;
+                  });
+                }
               ),
               SizedBox(height: 20.0),
               TextFormField(
+                validator: (val) => val.length < 6 ? 'Enter a password 6+ chars long' : null,
                 obscureText: true,
                 onChanged: (val){
-                  setState(() => password = val);
+                  setState(() { password = val;});
                 },
               ),
               SizedBox(height: 20.0),
@@ -63,10 +74,21 @@ class _RegisterState extends State<Register> {
                   style: TextStyle(color: Colors.white),
                 ),
                 onPressed: () async {
-                  print(email);
-                  print(password);
-                },
-              )
+                  if(_formKey.currentState.validate()){
+                   dynamic result = await _auth.registerWithEmailAndPassword(email, password);
+                   if(result == null){
+                     setState(() {
+                       error = 'please supply valid email';
+                     });
+                   }
+                  }
+                }
+              ),
+              SizedBox(height: 12.0),
+              Text(
+                error,
+                style: TextStyle(color: Colors.red, fontSize: 14.0),
+              ),
             ],
           ),
         ),
