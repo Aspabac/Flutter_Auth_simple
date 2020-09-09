@@ -2,9 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="62ccda77-9eef-4d3f-8412-509a9de57614" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/lib/screens/authenticate/register.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.dart_tool/package_config.json" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/package_config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins-dependencies" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.packages" beforeDir="false" afterPath="$PROJECT_DIR$/.packages" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/screens/authenticate/authenticate.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/authenticate/authenticate.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/screens/authenticate/register.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/authenticate/register.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/screens/authenticate/sign_in.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/authenticate/sign_in.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -92,26 +95,26 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
-    <state width="1076" height="267" key="GridCell.Tab.0.bottom" timestamp="1599574789768">
+    <state width="1076" height="267" key="GridCell.Tab.0.bottom" timestamp="1599619655173">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="1076" height="267" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1599567828099" />
-    <state width="1076" height="267" key="GridCell.Tab.0.bottom/1440.23.1024.681/0.23.1440.877@0.23.1440.877" timestamp="1599574789768" />
-    <state width="1076" height="267" key="GridCell.Tab.0.center" timestamp="1599574789767">
+    <state width="1076" height="267" key="GridCell.Tab.0.bottom/1440.23.1024.681/0.23.1440.877@0.23.1440.877" timestamp="1599619655173" />
+    <state width="1076" height="267" key="GridCell.Tab.0.center" timestamp="1599619655172">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="1076" height="267" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1599567828093" />
-    <state width="1076" height="267" key="GridCell.Tab.0.center/1440.23.1024.681/0.23.1440.877@0.23.1440.877" timestamp="1599574789767" />
-    <state width="1076" height="267" key="GridCell.Tab.0.left" timestamp="1599574789766">
+    <state width="1076" height="267" key="GridCell.Tab.0.center/1440.23.1024.681/0.23.1440.877@0.23.1440.877" timestamp="1599619655172" />
+    <state width="1076" height="267" key="GridCell.Tab.0.left" timestamp="1599619655172">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="1076" height="267" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1599567828092" />
-    <state width="1076" height="267" key="GridCell.Tab.0.left/1440.23.1024.681/0.23.1440.877@0.23.1440.877" timestamp="1599574789766" />
-    <state width="1076" height="267" key="GridCell.Tab.0.right" timestamp="1599574789768">
+    <state width="1076" height="267" key="GridCell.Tab.0.left/1440.23.1024.681/0.23.1440.877@0.23.1440.877" timestamp="1599619655172" />
+    <state width="1076" height="267" key="GridCell.Tab.0.right" timestamp="1599619655173">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="1076" height="267" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1599567828097" />
-    <state width="1076" height="267" key="GridCell.Tab.0.right/1440.23.1024.681/0.23.1440.877@0.23.1440.877" timestamp="1599574789768" />
+    <state width="1076" height="267" key="GridCell.Tab.0.right/1440.23.1024.681/0.23.1440.877@0.23.1440.877" timestamp="1599619655173" />
     <state x="421" y="130" width="918" height="670" key="com.android.tools.idea.avdmanager.AvdListDialog" timestamp="1599132952936">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
