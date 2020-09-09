@@ -46,12 +46,12 @@ class _RegisterState extends State<Register> {
             children: <Widget>[
               SizedBox(height: 20.0),
               TextFormField(
-//                間違ったemailだとPlatformExceptionが出る
-//                validator: (val) => val.isEmpty ? 'Enter a email' : null,
-                validator: (val){
-                  return RegExp(r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+").hasMatch(val) ?
-                  null : "Enter correct email";
-                },
+//                間違ったemailだとPlatformExceptionが出る(Debug限定)
+                validator: (val){ val.isEmpty ? 'Enter a email' : null;},
+//                validator: (val){
+//                  return RegExp(r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+").hasMatch(val) ?
+//                  null : "Enter correct email";
+//                },
                 onChanged: (val){
                   setState(() {
                     email = val;
@@ -60,7 +60,7 @@ class _RegisterState extends State<Register> {
               ),
               SizedBox(height: 20.0),
               TextFormField(
-                validator: (val) => val.length < 6 ? 'Enter a password 6+ chars long' : null,
+                validator: (val) {val.length < 6 ? 'Enter a password 6+ chars long' : null;},
                 obscureText: true,
                 onChanged: (val){
                   setState(() { password = val;});
