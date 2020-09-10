@@ -1,3 +1,5 @@
+import 'package:fire_auth_test/shared/constants.dart';
+import 'package:fire_auth_test/shared/loading.dart';
 import 'package:flutter/material.dart';
 import 'package:fire_auth_test/services/auth.dart';
 
@@ -14,16 +16,17 @@ class _RegisterState extends State<Register> {
 
   final AuthService _auth = AuthService();
   final _formKey = GlobalKey<FormState>();
+  bool loading = false;
 
-   //text field state
+  //text field state
   String email = '';
   String password = '';
   String error = '';
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.blueGrey[50],
+    return loading ? Loading() :Scaffold(
+      backgroundColor: Colors.blueGrey[100],
       appBar: AppBar(
         backgroundColor: Colors.blueGrey[400],
         elevation: 0.0,
@@ -46,8 +49,9 @@ class _RegisterState extends State<Register> {
             children: <Widget>[
               SizedBox(height: 20.0),
               TextFormField(
+                decoration: textInputDecoration.copyWith(hintText: 'Email'),
 //                間違ったemailだとPlatformExceptionが出る(Debug限定)
-                  validator: (val) => val.isEmpty ? 'Enter an email' :null,
+                validator: (val) => val.isEmpty ? 'Enter an email' :null,
 //                validator: (val){
 //                  return RegExp(r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+").hasMatch(val) ?
 //                  null : "Enter correct email";
@@ -60,6 +64,7 @@ class _RegisterState extends State<Register> {
               ),
               SizedBox(height: 20.0),
               TextFormField(
+                decoration: textInputDecoration.copyWith(hintText: 'Password'),
                 validator: (val) => val.length < 6 ? 'Enter a password 6+ chars long' :null,
                 obscureText: true,
                 onChanged: (val){
@@ -75,10 +80,15 @@ class _RegisterState extends State<Register> {
                 ),
                 onPressed: () async {
                   if(_formKey.currentState.validate()){
+                    setState(() {
+                      loading = true;
+                    });
                      dynamic result = await _auth.registerWithEmailAndPassword(email, password);
                      if(result == null){
                        setState(() {
-                         error = 'please supply valid email';});
+                         error = 'please supply valid email';
+                         loading = false;
+                       });
                      }
                   }
                 }
